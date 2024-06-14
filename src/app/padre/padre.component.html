@@ -1,3 +1,11 @@
 <h1>Contador: {{contador}}</h1>
-<button (click)="incrementar()">subir</button>
-<button (click)="decrementar()">bajar</button>
+
+<h5>padre: {{mensageRecibido}}</h5>
+<app-hijo 
+[mensageDelPadre]="mensage" 
+(mensageEmitido)="recibirMensaje($event)" 
+(incrementarHijo)="incrementar()"
+(decrementarHijo)="decrementar()"
+(likeHijo)="likearPadre()"
+/>
+<h4>{{like? '❤':'👀'}}</h4>

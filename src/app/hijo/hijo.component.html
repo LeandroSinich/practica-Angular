@@ -1,0 +1,14 @@
+<button (click)="incrementar()">subir</button>
+<button (click)="decrementar()">bajar</button>
+<p>soy el hijo: {{mensageDelPadre}}</p>
+<div>
+    <input type="text" [(ngModel)]="mensage" placeholder="escribi un mensaje">
+    <button type="button" (click)="emitirMensaje()">enviar</button>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div>
+    <button type="button" (click)="likear();enviarLike()">{{like ? 'ya no me gusta' : 'me gusta'}}</button>
+</div>
