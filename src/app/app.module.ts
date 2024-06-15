@@ -8,6 +8,7 @@ import { HijoComponent } from './hijo/hijo.component';
 import { FormsModule } from '@angular/forms';
 import { HermanoComponent } from './hermano/hermano.component';
 import { BlackBackDirective } from './black-back.directive';
+import { MiPipePipe } from './mi-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BlackBackDirective } from './black-back.directive';
     PadreComponent,
     HijoComponent,
     HermanoComponent,
-    BlackBackDirective
+    BlackBackDirective,
+    MiPipePipe
   ],
   imports: [
     BrowserModule,

@@ -13,6 +13,8 @@ export class PadreComponent {
   mensageRecibido: string = '';
   like: boolean = false;
   nombre: string = '';
+  insta: string = '';
+  fecha: Date = new Date();
   constructor(private _servicioFamiliar: ServicioFamiliarService){}
 
   saludar(){

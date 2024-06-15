@@ -1,4 +1,4 @@
-<h1 appBlackBack>Contador: {{contador}}</h1>
+<!-- <h1 appBlackBack>Contador: {{contador}}</h1>
 
 <h5>padre: {{mensageRecibido}}</h5>
 <app-hijo 
@@ -10,4 +10,9 @@
 />
 <h4>{{like? '❤':'👀'}}</h4>
 <input type="text" placeholder="coloca tu nombre" [(ngModel)]="nombre">
-<button type="button" (click)="saludar()">saludar</button>
+<button type="button" (click)="saludar()">saludar</button> -->
+<input type="text" placeholder="escribe tu instagram" [(ngModel)]="insta">
+<h2>{{insta | miPipe}}</h2>
+<label for="fecha">Ingresa tu fecha de nacimiento</label>
+<input type="date" id="fecha" [(ngModel)]="fecha">
+<h2>tu cumpleanios es el: {{fecha | date: 'dd/MM'}}</h2>
