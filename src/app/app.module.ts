@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { PadreComponent } from './padre/padre.component';
 import { HijoComponent } from './hijo/hijo.component';
 import { FormsModule } from '@angular/forms';
+import { HermanoComponent } from './hermano/hermano.component';
+import { BlackBackDirective } from './black-back.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     PadreComponent,
-    HijoComponent
+    HijoComponent,
+    HermanoComponent,
+    BlackBackDirective
   ],
   imports: [
     BrowserModule,

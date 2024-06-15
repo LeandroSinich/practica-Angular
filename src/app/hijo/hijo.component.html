@@ -1,4 +1,4 @@
-<button (click)="incrementar()">subir</button>
+<!-- <button (click)="incrementar()">subir</button>
 <button (click)="decrementar()">bajar</button>
 <p>soy el hijo: {{mensageDelPadre}}</p>
 <div>
@@ -11,4 +11,8 @@
 <br>
 <div>
     <button type="button" (click)="likear();enviarLike()">{{like ? 'ya no me gusta' : 'me gusta'}}</button>
+</div> -->
+<div>
+    <input type="text" placeholder="nombre de mascota" [(ngModel)]="mascota">
+<button type="button" (click)="enviarMascota()">enviar</button>
 </div>

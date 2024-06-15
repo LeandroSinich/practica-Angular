@@ -1,4 +1,4 @@
-<h1>Contador: {{contador}}</h1>
+<h1 appBlackBack>Contador: {{contador}}</h1>
 
 <h5>padre: {{mensageRecibido}}</h5>
 <app-hijo 
@@ -9,3 +9,5 @@
 (likeHijo)="likearPadre()"
 />
 <h4>{{like? '❤':'👀'}}</h4>
+<input type="text" placeholder="coloca tu nombre" [(ngModel)]="nombre">
+<button type="button" (click)="saludar()">saludar</button>

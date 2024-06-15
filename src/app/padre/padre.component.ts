@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { ServicioFamiliarService } from '../servicio-familiar.service';
 
 @Component({
   selector: 'app-padre',
@@ -6,11 +7,17 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./padre.component.css']
 })
 export class PadreComponent {
+
   contador: number = 0;
   mensage: string = 'mensage del padre'
   mensageRecibido: string = '';
   like: boolean = false;
-  
+  nombre: string = '';
+  constructor(private _servicioFamiliar: ServicioFamiliarService){}
+
+  saludar(){
+    this._servicioFamiliar.saludar(this.nombre);
+  }
   likearPadre(){
     this.like = !this.like
   }
