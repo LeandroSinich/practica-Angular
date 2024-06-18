@@ -1,0 +1,45 @@
+<div class="container">
+    <h2 class="text-center m-3">Productos de limpieza</h2>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Detalle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Lavandina</td>
+            <td>$5</td>
+            <td><button type="button" class="btn btn-info" [routerLink]="['/products', 'Lavandina']">Detalle</button></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Detergente</td>
+            <td>$4</td>
+            <td><button type="button" class="btn btn-info" [routerLink]="['/products', 'Detergente']">Detalle</button></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Lustra mueble</td>
+            <td>$7</td>
+            <td><button type="button" class="btn btn-info" [routerLink]="['/products', 'Lustra muebles']">Detalle</button></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Jabon liquido</td>
+            <td>$10</td>
+            <td><button type="button" class="btn btn-info" [routerLink]="['/products', 'Jabon liquido']">Detalle</button></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Quita manchas</td>
+            <td>$9</td>
+            <td><button type="button" class="btn btn-info" [routerLink]="['/products', 'Quita manchas']">Detalle</button></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
