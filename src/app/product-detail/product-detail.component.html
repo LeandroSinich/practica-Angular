@@ -1,1 +1,11 @@
-<p>{{producto}}</p>
+<div class="container-sm">
+    <ng-container *ngIf="!loading">
+        <h2>{{producto?.name}}</h2>
+        <p>{{producto?.description}}</p>
+        <p>{{producto?.price | currency}}</p>
+        <button class="btn btn-danger">Comprar</button>
+    </ng-container>
+    <ng-container *ngIf="loading">
+        <h2>🐌</h2>
+    </ng-container>
+</div>

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PadreComponent } from './padre/padre.component';
 import { HijoComponent } from './hijo/hijo.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HermanoComponent } from './hermano/hermano.component';
 import { BlackBackDirective } from './black-back.directive';
 import { MiPipePipe } from './mi-pipe.pipe';
@@ -32,7 +32,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
