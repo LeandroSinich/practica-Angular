@@ -1,1 +1,45 @@
-<p>contact works!</p>
+<div class="container">
+  <form [formGroup]="formularioContacto" (ngSubmit)="enviar()">
+    <div class="mb-3">
+      <label for="nombre" class="form-label" >Nombre</label>
+      <input
+        [ngClass]="{'is-invalid': hasErrors('nombre','required') || hasErrors('nombre', 'minlength')}"
+        type="text "
+        class="form-control"
+        id="nombre"
+        formControlName="nombre">
+      <div class="text-danger" *ngIf="hasErrors('nombre', 'required')">El nombre es obligatorio</div>
+      <div class="text-danger" *ngIf="hasErrors('nombre', 'minlength')">Minimo 3 caracteres</div>
+      <label for="apellido" class="form-label" >Apellido</label>
+      <input
+        [ngClass]="{'is-invalid': hasErrors('apellido','required') || hasErrors('apellido', 'minlength')}"
+        type="text "
+        class="form-control"
+        id="apellido"
+        formControlName="apellido">
+      <div class="text-danger" *ngIf="hasErrors('apellido', 'required')">El apellido es obligatorio</div>
+      <div class="text-danger" *ngIf="hasErrors('apellido', 'minlength')">Minimo 3 caracteres</div>
+      <label for="dni" class="form-label" >DNI</label>
+      <input
+        [ngClass]="{'is-invalid': hasErrors('dni','required') || hasErrors('dni', 'minlength')}"
+        type="text "
+        class="form-control"
+        id="dni"
+        formControlName="dni">
+      <div class="text-danger" *ngIf="hasErrors('dni', 'required')">El DNI es obligatorio</div>
+      <div class="text-danger" *ngIf="hasErrors('dni', 'minlength')">Minimo 3 caracteres</div>
+      <label for="email" class="form-label" >Email</label>
+      <input
+      [ngClass]="{'is-invalid': hasErrors('email','required') || hasErrors('email', 'email')}"
+      type="email"
+      class="form-control"
+      id="email"
+      formControlName="email"
+      >
+      <div class="text-danger" *ngIf="hasErrors('email', 'required')">El email es obligatorio</div>
+      <div class="text-danger" *ngIf="hasErrors('email', 'email')">Formato invalido</div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
