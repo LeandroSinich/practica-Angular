@@ -1,5 +1,5 @@
 <div class="container">
-    <h2 class="text-center m-3">Productos de limpieza</h2>
+    <h2 class="text-center m-3">Productos</h2>
     <table class="table">
         <thead>
           <tr>
@@ -12,8 +12,8 @@
         <tbody>
           <tr *ngFor="let product of products">
             <th scope="row">{{product.id}}</th>
-            <td>{{product.name}}</td>
-            <td [ngClass]="{'precio-color': product.price > 5, 'background-lavanda': product.name == 'Lavandina'}">{{product.price | currency}}</td>
+            <td>{{product.title}}</td>
+            <td [ngClass]="{'precio-color': product.price > 205}">{{product.price | currency}}</td>
             <td><button type="button" class="btn btn-info" [routerLink]="['/products', product.id]">Detalle</button></td>
           </tr>
           
